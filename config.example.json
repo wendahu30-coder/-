@@ -1,0 +1,34 @@
+{
+  "login_url": "http://校园网登录地址/替换成真实接口",
+  "method": "POST",
+  "username": "你的学号或账号",
+  "password": "你的密码",
+  "fields": {
+    "username": "{username}",
+    "password": "{password}",
+    "service": "internet"
+  },
+  "headers": {
+    "Referer": "http://校园网登录页面/替换成真实页面"
+  },
+  "success_status": [200],
+  "success_keywords": ["success", "登录成功", "online"],
+  "failure_keywords": ["密码错误", "账号不存在", "fail", "error"],
+  "online_checks": [
+    {
+      "host": "223.5.5.5",
+      "port": 53,
+      "timeout": 2
+    },
+    {
+      "host": "114.114.114.114",
+      "port": 53,
+      "timeout": 2
+    }
+  ],
+  "wait_before_login": 3,
+  "retries": 3,
+  "retry_interval": 5,
+  "timeout": 10,
+  "response_encoding": "utf-8"
+}

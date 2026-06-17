@@ -1,0 +1,81 @@
+﻿{
+    "login_url":  "https://aaa.njuit.edu.cn:802/eportal/portal/login",
+    "connect_host":  "10.255.255.154",
+    "connect_port":  802,
+    "method":  "GET",
+    "username":  "YOUR_ACCOUNT",
+    "password":  "YOUR_PASSWORD",
+    "fields":  {
+                   "login_method":  "1",
+                   "user_account":  ",0,{username}",
+                   "user_password":  "{password}",
+                   "wlan_user_ip":  "{local_ip}",
+                   "wlan_user_ipv6":  "",
+                   "wlan_user_mac":  "000000000000",
+                   "wlan_ac_ip":  "",
+                   "wlan_ac_name":  "",
+                   "jsVersion":  "4.2.2",
+                   "terminal_type":  "1",
+                   "callback":  "dr1000",
+                   "lang":  "zh-cn",
+                   "v":  "8321"
+               },
+    "headers":  {
+                    "Referer":  "https://aaa.njuit.edu.cn/a79.htm"
+                },
+    "success_status":  [
+                           200
+                       ],
+    "success_keywords":  [
+                             "\"result\":1",
+                             "\"login_result\":1",
+                             "\"ret_code\":0",
+                             "success"
+                         ],
+    "failure_keywords":  [
+                             "\"result\":0",
+                             "\"login_result\":0",
+                             "fail",
+                             "error"
+                         ],
+    "online_checks":  [
+                          {
+                              "host":  "223.5.5.5",
+                              "port":  53,
+                              "timeout":  2
+                          },
+                          {
+                              "host":  "1.1.1.1",
+                              "port":  443,
+                              "timeout":  2
+                          },
+                          {
+                              "host":  "204.79.197.200",
+                              "port":  80,
+                              "timeout":  2
+                          }
+                      ],
+    "wait_before_login":  3,
+    "retries":  1,
+    "retry_interval":  5,
+    "timeout":  10,
+    "response_encoding":  "utf-8",
+    "wifi_ssid":  "NIIT-WIFI",
+    "post_login_wait":  12,
+    "post_login_verify_attempts":  3,
+    "post_login_verify_interval":  5,
+    "online_http_checks":  [
+                               {
+                                   "url":  "http://www.msftconnecttest.com/connecttest.txt",
+                                   "expect_status":  200,
+                                   "expect_text":  "Microsoft Connect Test",
+                                   "timeout":  3
+                               },
+                               {
+                                   "url":  "http://connectivitycheck.gstatic.com/generate_204",
+                                   "expect_status":  204,
+                                   "expect_text":  null,
+                                   "timeout":  3
+                               }
+                           ]
+}
